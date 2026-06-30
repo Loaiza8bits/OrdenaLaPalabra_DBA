@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desafío DBA</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+<div id="pantallaInicio" class="card">
+<h1>🎓 Desafío DBA</h1>
+<p>Aprende conceptos de los Dispositivos Básicos de Aprendizaje.</p>
+<button onclick="mostrarInstrucciones()">Comenzar</button>
+</div>
+
+<div id="pantallaInstrucciones" class="card hidden">
+<h2>¿Cómo jugar?</h2>
+<p>Ordena las letras para descubrir conceptos relacionados con los DBA.</p>
+<ul>
+<li>Fácil: Categoría + definición + primera letra.</li>
+<li>Medio: Categoría + definición.</li>
+<li>Difícil: Solo categoría.</li>
+</ul>
+<button onclick="mostrarDificultades()">Continuar</button>
+</div>
+
+<div id="pantallaDificultad" class="card hidden">
+<h2>Selecciona la dificultad</h2>
+<button onclick="iniciarJuego('facil')">Fácil</button>
+<button onclick="iniciarJuego('medio')">Medio</button>
+<button onclick="iniciarJuego('dificil')">Difícil</button>
+</div>
+
+<div id="pantallaJuego" class="card hidden">
+<div class="progress"><div id="barra"></div></div>
+<p id="contador"></p>
+<h3 id="categoria"></h3>
+<p id="definicion"></p>
+<p id="primeraLetra"></p>
+<h2 id="palabra"></h2>
+<input id="respuesta" placeholder="Escribe la palabra">
+<button onclick="verificar()">Verificar</button>
+<div id="retro"></div>
+<p>Puntaje: <span id="puntaje">0</span></p>
+</div>
+
+<div id="pantallaFinal" class="card hidden">
+<h2>Resultado Final</h2>
+<p id="resultado"></p>
+<p id="mensajeFinal"></p>
+<button onclick="location.reload()">Jugar nuevamente</button>
+</div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
